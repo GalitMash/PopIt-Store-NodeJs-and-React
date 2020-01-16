@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>README</title>
+</head>
+<br>
+<h1>README</h1>
+<hr/>
+<h2>Note: To run the project, you need to run both of these commands separately: "npm run api" and "npm start".</h2>
+<hr/>
+<h2>Galit Mash:</h2>
+<h3>Store name</h3>
+<p>PopIt.</p>
+<h3>What are you selling?</h3>
+<p>"Funko Pop!" figures.</p>
+<h3>What additional page(s) did you add? How to operate them?</h3>
+<p>We added a Store Locator page that contains a Google Maps component that displays our "stores".
+You can click on the markers on the map to see the location of every "store". <br/>
+We also added a Customize A Pop page that contains a form where you can fill some details
+    and upload an image of a person you'd like to make a custom Pop of.</p>
+<h3>What was hard to do?</h3>
+<p>Since this is my first time working in React and I didn't know it at all before,
+    it took a while to learn and understand how to work with it. <br/>
+    It was a bit hard to read from files (for the users and user logs), but it turned out that I was overcomplicating it.
+    After I got the hang of React, everything went quite smoothly.</p>
+<h3>Who is your partner? What did you do? What did your partner do?</h3>
+<p>My partner is Dafna Shimshi, 312196082.<br/>
+    I did the App, Admin Screen (and reading/writing from/to file), CustomizePop, InputValidator, PrivateRoute, ProductList, ProductItem, Store Locator, Table and TextInput files, and their respective functions in the server and repository files. <br/>
+Dafna did the Cart, CartItem, Checkout, Login and Signup files (and their functions in server and repository) and took care of the tests.</p>
+<h3>Specify all the different route your app supports</h3>
+<p>/: The products list</br>
+    /cart: The products that the user added to his cart</br>
+    /checkout: A page where you can see your items and checkout - pay (the cart is removed) or cancel checkout.</br>
+    /customizepop: A page where you can send a form to purchase a custom Pop figure that will be customized according to the image you upload.</br>
+    /storelocator: Displays our "physical stores" on a Google map. <b>Please note</b> that sometimes a "This page can't load Google Maps correctly." error appears and the map is grayed out, but it still works! just press "OK" in the error. This is just because I didn't want to give billing information to Google... :)</br>
+    /admin : Displays the activity of all users, for the admin user only.</br>
+    /login: User login page, with a "Remember me" option. </br>
+    /signup: A page for registering a new user.</br></p>
+<h3>How did you make your store secured?</h3>
+<p>We validate all fields (including the image upload in Custom Pop) so no code can be injected/no harmful files can be uploaded. Also, there can be at most 50 files in our upload directory to prevent attackers from flooding us with uploads.</br>
+We authenticate users (their information can't be accessed or modified), and the admin screen can be accessed by the admin user only.
+</p>
+<h3>Did you implement the store using react.js?</h3>
+<p>Yes.</p>
+<hr/>
+<h2>Dafna Shimshi:</h2>
+<h3>Store Name</h3>
+<p>Popit</p>
+<h3>What are you selling?</h3>
+<p>We're selling Funko Pop figurines</p>
+<h3>What additional page(s) did you add? How to operate them</h3>
+<p>We've added 2 more pages.</br>
+    The first one is store locator- is shows you in google maps where you can find the different branches of our shop around the world</br>
+    The second one is customize a pop- it lets you order a costumized pop</p>
+<h3>What was hard to do?</h3>
+<p>Figuring out react was hard since i couldn't come to the react lecture, also figuring out how to make the cookies work, or decididng if things should be implemented in react, or in the backend.</p>
+<h3>Who is your partner?  name and id. What did you do? What did your partner do?</h3>
+<p>My partner is Galit Mash, ID 307839480</br>
+    I did the basic framework (most of the repository functions and the backend), the cart, checkout, user logging, login and signup.</br>
+    Galit did the prroducts view and the search function, private route, input validation, storelocator, reading and writing to files, customize a pop and admin view</p>
+<h3>Specify all the different route your app supports</h3>
+<p>/ : all of our products</br>
+    /cart : all the products that were added to cart</br>
+    /checkout : shows the list of products and allows you to "buy" them. Removes the purchased items from the cart</br>
+    /customizepop : allows you to fill a request form to order a customized funko pop, including uploading an image of the pop you want.</br>
+    /storelocator : shows you in google maps where you can find the different branches of our shop around the world</br>
+    /admin : exposes the activity of any other user, inclufing filtering on a user</br>
+    /login : the login page. includes a 'remember me' option to make the cookie never expire </br>
+    /signup : a sign up page to create a new user</br>
+</p>
+<h3>How did you make your store secured?</h3>
+<p>Forgery attacks- users cannot transmit unauthorized commands, since all input (in pages sign up and customize a pop) goes through input validation, to make sure that the input string is "clean" and nothing malicious will be written into the website files. also, you can't mofidy the admin user's password, because you can't override existing users.</br>
+    DOS defense- there is no user input that can cause an exception and crash the site. since all input is validated, nothing bad can be injected. also when the user uploads a file in 'customize a pop', the file size is limited, and no more than 10 files can be uploaded.
+</p>
+<h3>Did you implement the store using react.js?</h3>
+<p>Yes we did.</p>
+</body>
+</html>
